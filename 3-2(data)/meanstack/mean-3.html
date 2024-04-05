@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/63c50dd3d1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEAN STACK</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+    body{
+    
+       background-image: url(https://img.freepik.com/free-vector/realistic-polygonal-background_52683-59998.jpg?size=626&ext=jpg&ga=GA1.1.534965459.1699201123&semt=ais);
+       /*/meanstack/Screenshot__177_-removebg-preview-safeimagekit-Photoroom.jpg*/
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+     
+    
+      }
+      
+      .botao {
+          width: 125px;
+          height: 45px;
+          border-radius: 20px;
+          border: none;
+          box-shadow: 1px 1px rgba(107, 221, 215, 0.37);
+          padding: 5px 10px;
+          background: rgb(47,93,197);
+          background: linear-gradient(160deg, rgba(47,93,197,1) 0%, rgba(46,86,194,1) 5%, rgba(47,93,197,1) 11%, rgba(59,190,230,1) 57%, rgba(0,212,255,1) 71%);
+          color: #fff;
+          font-family: Roboto, sans-serif;
+          font-weight: 505;
+          font-size: 16px;
+          line-height: 1;
+          cursor: pointer;
+          filter: drop-shadow(0 0 10px rgba(59, 190, 230, 0.568));
+          transition: .5s linear;
+        }
+        
+        .botao .mysvg {
+          display: none;
+        }
+        
+        .botao:hover {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          transition: .5s linear;
+        }
+        
+        .botao:hover .texto {
+          display: none;
+        }
+        
+        .botao:hover .mysvg {
+          display: inline;
+        }
+        
+        .botao:hover::before {
+          content: '';
+          position: absolute;
+          top: -3px;
+          left: -3px;
+          width: 100%;
+          height: 100%;
+          border: 3.5px solid transparent;
+          border-top: 3.5px solid #fff;
+          border-right: 3.5px solid #fff;
+          border-radius: 50%;
+          animation: animateC 2s linear infinite;
+        }
+        
+        @keyframes animateC {
+          0% {
+            transform: rotate(0deg);
+          }
+        
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+       /* start*/
+       .button {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        background: none;
+        color: #0f1923;
+        cursor: pointer;
+        position: relative;
+        padding: 8px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all .15s ease;
+      }
+      
+      .button::before,
+      .button::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: calc(50% - 5px);
+        border: 1px solid #7D8082;
+        transition: all .15s ease;
+      }
+      
+      .button::before {
+        top: 0;
+        border-bottom-width: 0;
+      }
+      
+      .button::after {
+        bottom: 0;
+        border-top-width: 0;
+      }
+      
+      .button:active,
+      .button:focus {
+        outline: none;
+      }
+      
+      .button:active::before,
+      .button:active::after {
+        right: 3px;
+        left: 3px;
+      }
+      
+      .button:active::before {
+        top: 3px;
+      }
+      
+      .button:active::after {
+        bottom: 3px;
+      }
+      
+      .button_lg {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #0f1923;
+        overflow: hidden;
+        box-shadow: inset 0px 0px 0px 1px transparent;
+      }
+      
+      .button_lg::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        background-color: #0f1923;
+      }
+      
+      .button_lg::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 4px;
+        height: 4px;
+        background-color: #0f1923;
+        transition: all .2s ease;
+      }
+      
+      .button_sl {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: -1px;
+        left: -8px;
+        width: 0;
+        background-color: #ff4655;
+        transform: skew(-15deg);
+        transition: all .2s ease;
+      }
+      
+      .button_text {
+        position: relative;
+      }
+      
+      .button:hover {
+        color: #0f1923;
+      }
+      
+      .button:hover .button_sl {
+        width: calc(100% + 15px);
+      }
+      
+      .button:hover .button_lg::after {
+        background-color: #fff;
+      }
+      /*infoys button*/
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      .style{
+        margin: 4px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+      .foot{
+        background-color: black;
+        color: white;
+        width: 100%;
+        text-align: center;
+       }
+       .navbar{
+        background: transparent !important;
+        color: white !important;
+       }
+      #navbarNavDropdown{
+        list-style: none;
+        color: white;
+       }
+     .nav-link{
+      color: white !important;
+     }
+     .nav-link:hover{
+      background-color: white;
+      color: black !important;
+      border: 3px solid gray;
+      border-radius: 10px;
+     }
+     .dropdown-item{
+      color: white !important;
+     }
+      .navbar-nav{
+      color: white !important;
+     }
+     .collapse.navbar-collapse{
+      margin-left: auto !important;
+     }
+     .navbar{
+      margin-right: auto !important;
+     }
+     .dropdown-menu a{
+      color: black !important;
+     }
+     .navbar-brand{
+      color: yellow!important;
+      margin-right: auto !important;
+
+     }
+     .navbar-nav{
+      margin-left: auto;
+      
+     }
+     .nav-link{
+      margin: 10px;
+     }
+     .arrow-btn{
+      position: fixed;
+      bottom: 0px;
+      right: 20px;
+    }
+    .arrow-btn a{
+      color: white;
+      text-align: center;
+      font-size: 40px;
+      cursor: pointer;
+      transition: 2s;
+     
+    }
+.fa-circle-arrow-up{
+      background-color: black;
+      border-radius: 50%;
+    }
+    
+    html{
+      scroll-behavior: smooth;
+    }
+    .text-center img{
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+    }
+    /**/
+    #preloader{
+      background: white;
+       height: 100vh;
+       width: 100%;
+       position: fixed;
+       z-index: 100;
+       display: flex;
+       justify-content: center;
+      }
+    .loader {
+      width: 100%;
+      height: 100%;
+      margin: auto;
+      display: block;
+      position: relative;
+      background: #FFF;
+      box-sizing: border-box;
+    }
+    .loader::after {
+      content: '';  
+      width: calc(100% - 30px);
+      height: calc(100% - 30px);
+      top: 100px;
+      left: 100px;
+      position: absolute;
+      background-image: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent 80%), linear-gradient(#DDD 56px, transparent 0), linear-gradient(#DDD 24px, transparent 0), linear-gradient(#DDD 18px, transparent 0), linear-gradient(#DDD 66px, transparent 0);
+      background-repeat: no-repeat;
+      background-size: 75px 130px, 55px 56px, 160px 30px, 260px 20px, 290px 56px;
+      background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+      box-sizing: border-box;
+      animation: animloader 1s linear infinite;
+    }
+    
+    @keyframes animloader {
+      0% {
+        background-position: 0% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+      }
+      100% {
+        background-position: 150% 0, 0 0, 70px 5px, 70px 38px, 0px 66px;
+      }
+    }
+    /**/
+      @media only screen and (max-width:768px) {
+       .wrapper{
+        padding-left: 30px;
+        
+       }
+       body{
+    
+        background-image: url(https://images.unsplash.com/photo-1545486332-9e0999c535b2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8fA%3D%3D);
+        /*/meanstack/Screenshot__177_-removebg-preview-safeimagekit-Photoroom.jpg*/
+         background-repeat: no-repeat;
+         background-size: cover;
+        
+      
+     
+       }
+  
+      .box{
+        padding: 0;
+        margin: 0;
+      }
+      .edge{
+        padding-left: 20px;
+      }
+      .nav-link{
+        color: white !important;
+        width: 100px;
+        text-align: center;
+        }
+        #download{
+          width: 200px;
+          padding-left: 0%;
+          
+        }
+        .navbar-toggler{
+          background-color: white;
+        }
+        }
+      
+</style>
+<body>
+
+  <div id="preloader">
+    <span class="loader"></span>
+  </div>
+
+<!--  -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" id="topbutton">
+  <a class="navbar-brand" href="/index/home.html">STUDY_HUB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <!--  -->
+
+    <!--  -->
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/index/home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+     
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Units
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="mean-1.html">Unit-1</a>
+          <a class="dropdown-item" href="mean-2.html">Unit-2</a>
+          <a class="dropdown-item" href="#">Unit-3</a>
+          <a class="dropdown-item" href="#">Unit-4</a>
+          <a class="dropdown-item" href="#">Unit-5</a>
+        </div>
+      </li>
+    </ul>
+
+<li class="nav-item active">
+  <a class="nav-link" href="#materials-download" id="download">Download Material</a>
+</li>
+      <li class="nav-item">
+        <a class="nav-link" href="#syllabus">Syllabus</a>
+      </li>
+    
+  </div>
+</nav>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          UNITS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Unit-1</a>
+          <a class="dropdown-item" href="#">Unit-2</a>
+          <a class="dropdown-item" href="#">Unit-3</a>
+          <a class="dropdown-item" href="#">Unit-4</a>
+          <a class="dropdown-item" href="#">Unit-5</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<!--  -->
+
+    <div class="m-3 p-3 rounded border border-10 text-center box"><h1 class="display-2 text-light">MEAN STACK</h1></div>
+
+    
+ <details>
+    <summary class="text-success lead display-6 wrapper" id="syllabus" title="click me to see syllabus">UNIT-III:
+      Node.js:
+    </summary>
+    <ol class="text-light">
+       
+     <li>Why and What Node.js</li>
+     <li>How to use Node.js</li>
+     <li>Create a web server in Node.js</li>
+     <li>Node Package Manager</li>
+     <li>Modular programming in Node.js</li>
+     <li>Restarting Node Application</li>
+     <li>File Operations.</li>
+
+     <details>
+      <summary class="text-light lead display-6 wrapper" id="syllabus" title="click me to see syllabus">Express.js:</summary>
+      <ol class="text-light">
+         
+       <li>Express Development Environment</li>
+       <li>Defining a route</li>
+       <li>Handling Routes</li>
+       <li>Route and Query Parameters</li>
+       <li>How Middleware works</li>
+       <li>Chaining of Middlewares</li>
+       <li>Types of Middlewares</li>
+       <li>Connecting to MongoDB with Mongoose</li>
+       <li>Validation Types and Defaults</li>
+       <li>Models</li>
+       <li>CRUD Operations</li>
+       <li>API Development</li>
+       <li>Why Session management</li>
+       <li>Cookies</li>
+       <li>Sessions</li>
+       <li>Why and What Security</li>
+       <li>Helmet Middleware</li>
+       <li>Using a Template Engine Middleware</li>
+       <li>Stylus CSS Preprocessor.</li>
+    </details>
+    </ol>
+    </details>
+            
+ <div class="edge">
+ <h2 class="text-white">TOPIC WISE REFERENCE VIDEOS</h2>
+ <div class="style">
+    <button type="button" class="btn btn-outline-dark text-dark style"><a href="https://youtu.be/8u1o-OmOeGQ?si=z8WY9LJvWCgkSs9P" target="_blank" style="text-decoration: none; color:white">What is Node.js</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/x1cEbRIrOu4?si=kn-mql_3_BIYlSXW"target="_blank" style="text-decoration: none; color:white">Create a web server in Node.js</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/8JQaedsB2qI?si=EU86UZ-CBiLLyPj5" style="text-decoration: none; color:white"></a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://infyspringboard.onwingspan.com/web/en/viewer/web-module/lex_4470529061926725600_shared?collectionId=lex_17739732834840810000_shared&collectionType=Course&pathId=lex_1042392069779663400_shared"target="_blank" style="text-decoration: none; color:white">HTML - Need</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://infyspringboard.onwingspan.com/web/en/viewer/web-module/lex_4353993818065160700_shared?collectionId=lex_17739732834840810000_shared&collectionType=Course&pathId=lex_1042392069779663400_shared" target="_blank"style="text-decoration: none; color:white">Case-insensitivity</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://infyspringboard.onwingspan.com/web/en/viewer/web-module/lex_31915400002322630000_shared?collectionId=lex_17739732834840810000_shared&collectionType=Course&pathId=lex_1042392069779663400_shared"target="_blank" style="text-decoration: none; color:white">Platform-independency</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://infyspringboard.onwingspan.com/web/en/viewer/web-module/lex_22386841117356110000_shared?collectionId=lex_17739732834840810000_shared&collectionType=Course&pathId=lex_1042392069779663400_shared"target="_blank" style="text-decoration: none; color:white">DOCTYPE Declaration</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/QcTJcdiuGWc?si=g2gqIu64a2HKcY7B"target="_blank" style="text-decoration: none; color:white">Types of Elements</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/ApZIN25W6Rk?si=1YgT9FHnzldS88AG"target="_blank" style="text-decoration: none; color:white">HTML Elements - Attributes</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/ATovYIOO83A?si=w6CrgoRRsDftxq0A"target="_blank" style="text-decoration: none; color:white"></a> Metadata Element</button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/ggJfu86wHgs?si=1loUnkw6cAlPq99L"target="_blank" style="text-decoration: none; color:white">Sectioning Elements</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/dkyDMoklo0g?si=BR1TlGjWp4vJ8Sel"target="_blank" style="text-decoration: none; color:white">Paragraph Element</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/hjhZ_rbM58Q?si=xxzAEPXpAOtJgbED"target="_blank" style="text-decoration: none; color:white">Division and Span Elements</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/BzUbNRSWnPU?si=d5bYZY87jxUNt0HZ"target="_blank" style="text-decoration: none; color:white">Character Entities</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/8haxr6ufgmE?si=reUEezAFLtK-ralM"target="_blank" style="text-decoration: none; color:white">Colspan/ Rowspan Attributes</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/l-mUUD09VZ0?si=0k3zyzSbOSdYlRtx"target="_blank" style="text-decoration: none; color:white">border</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/geZhak0U76Q?si=wNVYvScdzImtj1Gw"target="_blank" style="text-decoration: none; color:white">cellspacing and cellpadding attributes</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/pv41J4MJvTE?si=QBUpKqZg1MdxyE22"target="_blank" style="text-decoration: none; color:white">Creating Form Elements</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/oGO5NB5Cobs?si=vZkH8dkGh4p_ze5U"target="_blank" style="text-decoration: none; color:white">Form</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/EYbpqqWcdIU?si=1sJMGg-CyuxfKkK5"target="_blank" style="text-decoration: none; color:white">Color and Date Pickers</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/WEbIjmIl18w?si=SGKaNW_modzqS3LP"target="_blank" style="text-decoration: none; color:white">Select Elements</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/vxNSLrHNdis?si=WIVDjZRRN7912T3N"target="_blank" style="text-decoration: none; color:white">Datalist Elements</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/aRGdDy18qfY?si=bNJOn82wcU0F9_M4"target="_blank" style="text-decoration: none; color:white">Iframe</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/x6u52n3TjiI?si=e4mrQoPpY3-qRby3"target="_blank" style="text-decoration: none; color:white">HTML Injection</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/Els0GRj0CQM?si=DTzEfsKKiU9IKf1k"target="_blank" style="text-decoration: none; color:white">Clickjacking</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/b1cxWguGtrw?si=D6hB9LksBtc_p2sP"target="_blank" style="text-decoration: none; color:white">HTML5 Attributes</a></button>
+    <button type="button" class="btn btn-outline-dark text-white style"><a href="https://youtu.be/M9pmU-a_YTg?si=979rMWFo1aeG7LsF"target="_blank" style="text-decoration: none; color:white">Local Storage Vulnerabilities</a></button>
+</div>
+
+<h3 class="display-5 text-white text-center" id="materials-download">MATERIAL FOR UNIT-3</h3>
+</div>
+   <div class="text-center">
+   
+<a href="https://drive.google.com/file/d/1ccSo0dC5xc_v2pLHi0-Bi7vmade8JTt5/view?usp=sharing" target="_blank">
+    <button class="botao">
+        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mysvg"><g id="SVGRepo_bgCarrier" stroke-width="0">
+          </g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+             <g id="Interface / Download"> 
+             <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#f1f1f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+             </path>
+          </g> </g>
+        </svg>
+        <span class="texto">Download</span>
+      </button>
+    </a>
+ 
+</div>
+<br>
+<br>
+
+
+<h3 class="display-5 text-white text-center">FULL MATERIAL FOR JS</h3>
+<div class="text-center">
+  <a href="https://drive.google.com/file/d/1MF0k4h6TH8tAB2U_OAnhnlbdRY-FCjlk/view?usp=sharing" target="_blank">
+  <button class="button">
+    <span class="button_lg">
+        <span class="button_sl"></span>
+        <span class="button_text">Download TEXT BOOK</span>
+    </span>
+  </button>
+</a>
+</div>
+
+
+<!-- <h3 class="display-5 text-white text-center">INFOSYS SPRING BOARD</h3> -->
+<h3 class="display-5 text-white text-center">Material Ref-2</h3>
+<div class="text-center">
+  <a href="https://drive.google.com/file/d/1WTKg2wg7cTqKNZ-luQxS0pr46TnT09ZA/view?usp=sharing" target="_blank">
+  <button class="button">
+    <span class="button_lg">
+        <span class="button_sl"></span>
+        <span class="button_text">Download Ref-2</span>
+    </span>
+  </button>
+</a>
+</div>
+<div text-center>
+
+  <a href="https://infyspringboard.onwingspan.com/web/en/app/toc/lex_32407835671946760000_shared/overview" class="text-center">
+    <img src="https://www.infosys.com/content/dam/infosys-web/en/global-resource/18/springboard-logo.png" width="150px" height="100px" alt="infosys spring board" class="center">
+  </a>
+  
+</div>
+
+<div class="arrow-btn">
+  <a href="#topbutton"> <span><i class="fa-solid fa-circle-arrow-up"></i></span></a>
+</div>
+
+
+
+
+
+<footer class="foot">
+  © 2024 STUDY_HUB. ALL RIGHTS RESERVED. | FOUNDED BY STUDY_HUB
+</footer>
+
+
+
+<script>
+  let loader= document.getElementById('preloader')
+window.addEventListener("load",function(){
+ loader.style.display='none';
+})
+</script>
+</body>
+</html>

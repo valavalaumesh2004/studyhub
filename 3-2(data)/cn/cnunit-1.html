@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- google fi=onts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap" rel="stylesheet">
+  <!--  -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CN UNIT-1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+    body{
+ /*   background-image: url(https://fontawesome.com/images/pro-upgrade-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;background-color: #1D2228;
+    */
+    background:linear-gradient(45deg, blueviolet, lightgreen);
+      }
+   .h2data{
+    text-align: center;
+    
+   }
+        .btn a:hover{
+          color: black;
+      }
+      .btn-outline-light:hover{
+        color: black !important;
+      }
+      .box h1{
+        color: #E1E2E2;
+      }
+   
+        
+        .truculenta-fonts {
+          font-family: "Truculenta", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 500;
+          font-style: normal;
+
+        }
+     
+      .buttonanchor{
+text-align: center;
+text-decoration: none;
+color: white;
+      }
+      .buttonanchor:hover{
+        color: white;
+        text-align: center;
+text-decoration: none;
+
+        
+      }
+    
+      .lead summary{
+        color: #00ED64;
+        text-align: center !important;
+      }
+      .display-6{
+        color: #00ED64;
+      }
+      .btn {
+       color: #00ED64 !important;
+      }
+      .botao {
+          width: 125px;
+          height: 45px;
+          border-radius: 20px;
+          border: none;
+          box-shadow: 1px 1px rgba(107, 221, 215, 0.37);
+          padding: 5px 10px;
+          background: rgb(47,93,197);
+          background: linear-gradient(160deg, rgba(47,93,197,1) 0%, rgba(46,86,194,1) 5%, rgba(47,93,197,1) 11%, rgba(59,190,230,1) 57%, rgba(0,212,255,1) 71%);
+          color: #fff;
+          font-family: Roboto, sans-serif;
+          font-weight: 505;
+          font-size: 16px;
+          line-height: 1;
+          cursor: pointer;
+          filter: drop-shadow(0 0 10px rgba(59, 190, 230, 0.568));
+          transition: .5s linear;
+        }
+        
+        .botao .mysvg {
+          display: none;
+        }
+        
+        .botao:hover {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          transition: .5s linear;
+        }
+        
+        .botao:hover .texto {
+          display: none;
+        }
+        
+        .botao:hover .mysvg {
+          display: inline;
+        }
+        
+        .botao:hover::before {
+          content: '';
+          position: absolute;
+          top: -3px;
+          left: -3px;
+          width: 100%;
+          height: 100%;
+          border: 3.5px solid transparent;
+          border-top: 3.5px solid #fff;
+          border-right: 3.5px solid #fff;
+          border-radius: 50%;
+          animation: animateC 2s linear infinite;
+        }
+        
+        @keyframes animateC {
+          0% {
+            transform: rotate(0deg);
+          }
+        
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+       /* start*/
+       .button {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        border: none;
+        background: none;
+        color: #0f1923;
+        cursor: pointer;
+        position: relative;
+        padding: 8px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 14px;
+        transition: all .15s ease;
+      }
+      
+      .button::before,
+      .button::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        height: calc(50% - 5px);
+        border: 1px solid #7D8082;
+        transition: all .15s ease;
+      }
+      
+      .button::before {
+        top: 0;
+        border-bottom-width: 0;
+      }
+      
+      .button::after {
+        bottom: 0;
+        border-top-width: 0;
+      }
+      
+      .button:active,
+      .button:focus {
+        outline: none;
+      }
+      
+      .button:active::before,
+      .button:active::after {
+        right: 3px;
+        left: 3px;
+      }
+      
+      .button:active::before {
+        top: 3px;
+      }
+      
+      .button:active::after {
+        bottom: 3px;
+      }
+      
+      .button_lg {
+        position: relative;
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        background-color: #0f1923;
+        overflow: hidden;
+        box-shadow: inset 0px 0px 0px 1px transparent;
+      }
+      
+      .button_lg::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 2px;
+        background-color: #0f1923;
+      }
+      
+      .button_lg::after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 4px;
+        height: 4px;
+        background-color: #0f1923;
+        transition: all .2s ease;
+      }
+      
+      .button_sl {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: -1px;
+        left: -8px;
+        width: 0;
+        background-color: #ff4655;
+        transform: skew(-15deg);
+        transition: all .2s ease;
+      }
+      
+      .button_text {
+        position: relative;
+      }
+      
+      .button:hover {
+        color: #0f1923;
+      }
+      
+      .button:hover .button_sl {
+        width: calc(100% + 15px);
+      }
+      
+      .button:hover .button_lg::after {
+        background-color: #fff;
+      }
+      /*infoys button*/
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      .style{
+          margin: 4px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          flex-grow: 1;
+      }
+      .foot{
+        background-color: black;
+        color: white;
+        width: 100%;
+        text-align: center;
+       }
+.navbar a{
+    color: #E1E2E2 !important;
+    font-weight: 300;
+
+    
+}
+.nav-link{
+  border: 1px solid white;
+  margin: 5px;
+  background-color: #FB8122
+  ;
+  border-radius: 10px;
+  color: #E1E2E2;
+  font-weight: 300 !important;
+}
+.navbar a:hover{
+  color: #E1E2E2 !important;
+
+
+  
+border-radius: 50px;
+}
+.navbar a{
+  color: black !important;
+}
+
+#download{
+
+    text-decoration: none !important;
+    
+  }
+  .nav-item li{
+    text-decoration: none !important;
+  }
+  .navbar-nav{
+    margin-left: auto !important;
+  }
+  .navbar-brand a{
+    color: white !important;
+  }
+  #logo{
+    color: white;
+  }
+  .dropdown-item a:hover{
+    color: black !important;
+    background-color: orange !important;
+  }
+  .dropdown-menu{
+    color: black;
+  }
+  #logo{
+    color: white !important;
+  }
+ @media only screen and (min-width:300px) {
+       .wrapper{
+        padding-left: 30px;
+        
+       }
+  
+      .box{
+        padding: 0;
+        margin: 0;
+      }
+      .edge{
+        padding-left: 20px;
+      }
+      .nav-link{
+        color: white !important;
+        width: 100px;
+        text-align: center;
+        }
+        #download{
+          width: 200px;
+          padding-left: 0%;
+          
+        }
+        .navbar-toggler{
+          background-color: white;
+          
+        }
+        }
+      
+</style>
+<body>
+<!--  -->
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="#" id="logo">STUDY_HUB</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <!--  -->
+
+    <!--  -->
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="/index/home.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+     
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Units
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="/cn/cnunit-1.html">Unit-1</a>
+          <a class="dropdown-item" href="/cn/cnunit-2.html">Unit-2</a>
+          <a class="dropdown-item" href="/construction/process1.html">Unit-3</a>
+          <a class="dropdown-item" href="#">Unit-4</a>
+          <a class="dropdown-item" href="#">Unit-5</a>
+        </div>
+     <li class="nav-item active">
+  <a class="nav-link" href="#materials-download" id="download">Download Material</a>
+</li>
+      <li class="nav-item">
+        <a class="nav-link" href="#syllabus">Syllabus</a>
+      </li>
+    </ul>
+   
+
+    
+  </div>
+</nav>
+<hr>
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          UNITS
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Unit-1</a>
+          <a class="dropdown-item" href="#">Unit-2</a>
+          <a class="dropdown-item" href="#">Unit-3</a>
+          <a class="dropdown-item" href="#">Unit-4</a>
+          <a class="dropdown-item" href="#">Unit-5</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<!--  -->
+    <div class="m-3 p-3 rounded border border-10 text-center box"><h1 class="display-3">COMPUTER NETWORKS</h1></div>
+<hr>
+    <h2 class="h2data">unit-1</h2>
+    <hr>
+ <details>
+    <summary class="lead display-6 wrapper" id="syllabus" title="click me to see syllabus" >Introduction:</summary>
+    <ol class="text-light truculenta-fonts">
+      <li>Introduction:</li>
+      <li>Network Types</li>
+      <li>LAN</li>
+      <li>MAN</li>
+      <li>WAN</li>
+      <li>Network Topologies</li> 
+      <li>Reference models</li>
+      <li>The OSI Reference Model</li>
+      <li>The TCP/IP Reference Model</li>
+      <li>A Comparison of the OSI and TCP/IP Reference Models</li>
+      <li>OSI Vs TCP/IP</li>
+      <li>Lack of OSI models success</li>
+      <li>Internet History.</li>       
+        </ol>
+        <details>
+          <summary class="lead display-6 wrapper" id="syllabus" title="click me to see syllabus" >Physical Layer</summary>
+          <ol class="text-light" start="15">
+             <li>Introduction to Guided Media</li>
+             <li>Twisted-pair cable</li>
+             <li>Coaxial cable and Fiber optic cable </li>
+             <li>unguided media:</li>
+             <li>Wireless-Radio waves</li>
+             <li>microwaves</li>
+             <li>infrared</li>
+             
+              
+              </ol>
+             
+       </details>Network Types
+ </details>
+ <hr>
+ <div class="edge">
+ <h2 class="text-white">TOPIC WISE REFERENCE VIDEOS</h2>
+ <div class="style">
+    <button type="button" class="btn btn-outline-light style"><a href="https://youtu.be/wXsgJPnr1nQ?si=UXNlLlWNEM_nVn5b" target="_blank"  class="buttonanchor">Introduction Network</a></button>
+    <button class="btn btn-outline-light style"><a href="https://youtu.be/Xnf8YtSujKo?si=cQTg8qIEmr1qx5UG" target="_blank" class="buttonanchor">Network Types</a></button>
+    <button type="button" class="btn btn-outline-light style"><a href="https://youtu.be/uHYSXkQ69OA?si=nXJLm8XX_2YOUnlu"  target="_blank" class="buttonanchor">Network Topologies</a></button>
+    <button class="btn btn-outline-light style"><a href="https://youtu.be/H_mhkuPbOtk?si=gyqsU45xsdZbumfR" class="buttonanchor">OSI Reference Model</a></button>
+    <button type="button" class="btn btn-outline-light style"><a href="https://youtu.be/FS_7eOatneg?si=yRmVQTeaKmXhJtDz" target="_blank"  class="buttonanchor">1.Physical layer</a></button>
+    <button class="btn btn-outline-light style"><a href="https://youtu.be/Kqj43z2XpGs?si=Q7WDKsE1FlpHv3uY" class="buttonanchor">2.Data-Link Layer</a></button>
+    <button type="button" class="btn btn-outline-light style"><a href="https://youtu.be/8Y8MeT0P_lk?si=cboL_9meIHM7Jb-U" target="_blank" class="buttonanchor">3.Network Layer</a></button>
+    <button class="btn btn-outline-light style style"><a href="https://youtu.be/5-hwM4KRCjI?si=OxwvWNH_VmxBeBPT" target="_blank" class="buttonanchor">4.Transport Layer</a></button>
+    <button type="button" class="btn btn-outline-light style"><a href="https://youtu.be/HCrbkxzdwmY?si=0hU2r5XhNWlNxShr" target="_blank" class="buttonanchor">5.Session Layer</a></button>
+    <button class="btn btn-outline-light style"><a href="https://youtu.be/DypRoeSLruM?si=FDzV9mTcmCFCqY5r" target="_blank" class="buttonanchor">6.Presentation Layer</a></button>
+    <button type="button" class="btn btn-outline-light style"><a href="https://youtu.be/5N7BUR3BOUA?si=g3vDyYCLlC0GX764" target="_blank" class="buttonanchor">7.Application Layer</a></button>
+    <button class="btn btn-outline-light style"><a href="https://youtu.be/VJxJCSEtY_0?si=0h518bU6Yh-kHV9I" target="_blank" class="buttonanchor">TCP/IP Reference Model</a></button>
+    <button type="button" class="btn btn-outline-light style"><a href="https://youtu.be/vmOeWLxzibU?si=m0gK9Et0s9Cg4QC0" target="_blank"  class="buttonanchor">OSI Vs TCP/IP</a></button>
+    <button class="btn btn-outline-light style"><a href="https://youtu.be/xNK_IxTv5jk?si=5zfr1UGoBpC18652" target="_blank" class="buttonanchor">Lack of OSI models success</a></button>
+    <button type="button" class="btn btn-outline-light style"><a href="https://youtu.be/Oh93xiKv-Jg?si=gKvOXihwIdPL7QLM" target="_blank"  class="buttonanchor">Internet History</a></button>
+    <button class="btn btn-outline-light style"><a href="" target="_blank" class="buttonanchor">pargraph</a></button>
+
+    <span class="border-top"></span>
+  <button class="btn btn-outline-light style"><a href="" target="_blank" class="buttonanchor">pargraphgbjfkngjkrfbngjkrfb</a></button>
+  <button class="btn btn-outline-light style"><a href="" target="_blank" class="buttonanchor">pargraph</a></button>
+</div>
+<hr>
+<h3 class="display-5 text-dark text-center" id="materials-download">MATERIAL FOR UNIT-1</h3>
+</div>
+   <div class="text-center">
+   
+<a href="https://drive.google.com/file/d/1OSMKPzM3UlxirBQ6CVzQBlgvHroJz0VL/view?usp=sharing" target="_blank">
+    <button class="botao">
+        <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mysvg"><g id="SVGRepo_bgCarrier" stroke-width="0">
+          </g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier">
+             <g id="Interface / Download"> 
+             <path id="Vector" d="M6 21H18M12 3V17M12 17L17 12M12 17L7 12" stroke="#f1f1f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+             </path>
+          </g> </g>
+        </svg>
+        <span class="texto">Download</span>
+      </button>
+    </a>
+ 
+</div>
+<br>
+<br>
+
+
+<h3 class="display-5 text-dark text-center">FULL MATERIAL FOR HTML</h3>
+<div class="text-center">
+  <a href="https://drive.google.com/file/d/1uPaR_1jxe4lKRaUwkzMqwH8Bsut1GBRy/view?usp=sharing" target="_blank">
+  <button class="button">
+    <span class="button_lg">
+        <span class="button_sl"></span>
+        <span class="button_text">Download TEXT BOOK</span>
+    </span>
+  </button>
+</a>
+</div>
+
+
+<!-- <h3 class="display-5 text-white text-center">INFOSYS SPRING BOARD</h3> -->
+<h3 class="display-5 text-dark text-center">MID-1 Answers</h3>
+<div class="text-center">
+  <a href="https://drive.google.com/file/d/1tuGMjlujCSJ91oOHcxSR2UeZZePuNYGI/view?usp=sharing" target="_blank">
+  <button class="button">
+    <span class="button_lg">
+        <span class="button_sl"></span>
+        <span class="button_text">Download MID-1</span>
+    </span>
+  </button>
+</a>
+</div>
+<div text-center>
+ 
+  
+
+ 
+  
+</div>
+
+
+
+
+<hr>
+<footer class="foot">
+  © 2024 STUDY_HUB. ALL RIGHTS RESERVED. | FOUNDED BY STUDY_HUB
+</footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

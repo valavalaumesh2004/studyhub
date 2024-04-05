@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/63c50dd3d1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:white;
+        font-family: sans-serif;
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+       
+    }
+    .navbar-nav{
+        margin-left: auto;
+    }
+    h1{
+        color: black;
+        font-size: 40px;
+        font-weight: 100;
+        text-align: center;
+        margin: 30px;
+    }
+    .divtag a{
+        text-decoration: none;
+        margin: 0% !important;
+        padding: 0%;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+        border: 4px solid purple;
+      
+       }
+       .divtag{
+        background-color: white;
+        width: 300px;
+        height: 400px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 30px;
+        margin-left: auto;
+        margin-right: auto;
+       
+        
+    }
+    .divtag:hover{
+        background-color:powderblue ;
+        color: white;
+        box-shadow: 0 10px 15px rgba(0,0,0,.3);
+        transform: scale(1.1);
+       
+        border: 5px solid white;
+        h2{
+            color: white;
+        }
+
+    }
+    h2{
+        text-align: center;
+        color: purple;
+    }
+    p{
+        text-align: left;
+    }
+  
+  .button-1{
+      margin: 20px;
+      margin-top: 50px;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+
+  }
+  
+  .button-2{
+      margin: 20px;
+      margin-top: 80px;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+
+  }
+  .button-3{
+      margin: 30px;
+      margin-top: 0px;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+
+  }
+  .button-4{
+      margin: 20px;
+      margin-top: 0px;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+
+  }
+  .button-5{
+      margin: 20px;
+      margin-top: 0px;
+      text-decoration: none;
+      text-align: center;
+      align-items: center;
+
+  }
+    /* todo list styles*/
+   
+    .btn1{
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin-left: 250px;
+      }
+      
+      .container {
+        background: #fff;
+        max-width: 600px;
+        width: 100%;
+        display: table;
+        margin: 0 auto;
+        margin-top: 40px;
+        border: 1px solid #cfcbcc;
+      }
+      
+      input {
+        border: none;
+        display: block;
+        width: 98.4%;
+        line-height: 1.5;
+        padding: 8px 0 8px 10px;
+        border-bottom: 1px solid #cfcbcc;
+        outline:0;
+      }
+      
+      h1,h2 {
+        text-align: center;
+        margin-bottom: 0px;
+        line-height: 1;
+      }
+      h2 {
+        color: gray;
+      }
+      
+      ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          color: #899098;
+          font-weight: 400;
+          border-bottom: 1px solid #cfcbcc;
+          line-height: 1.5;
+          padding: 8px 0;
+          &:before {
+            content: "\25A1";
+            padding: 10px 10px;
+            font-size: 20px;
+          }
+          &:hover {
+            text-decoration: line-through;
+            cursor: pointer;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+        } 
+      }
+      
+      .checked {
+        color:green;
+          &:before {
+            content: "\2713";
+            padding: 10px 10px;
+            font-size: 20px;
+          }
+          &:hover {
+            text-decoration: none;
+            &:after {
+              content: "❌";
+              color: tomato;
+              text-align: right;
+            }
+          }
+      }
+    
+    
+    /**/
+    
+    /*tolist style ended*/
+
+    .bottomdata{
+    width: 800px;
+    height: 300px;
+    color: #899098;
+    }
+    .bottom-info{
+        background-color: powderblue;
+        width: 100%;
+        height: 300px;
+      
+        .border-top{
+            margin-top: 30px;
+        }
+    }
+
+    /*fotter tag*/
+    footer{
+        background-color: black;
+    }
+    .footcontainer{
+        width: 100%;
+        padding: 70px 30px 20px;
+    }
+    .socialmedia{
+        display: flex;
+        justify-content: center;
+    }
+    .socialmedia a{
+        text-decoration: none;
+        padding: 10px;
+  
+        margin: 10px;
+        border-radius: 40%;
+    }
+    .fa-brands{
+        color: white;
+        font-size: 50px;
+    }
+   
+    .fa-brands:hover{
+        color: powderblue;
+        transform: scale(1.5);
+    }
+    .footernav{
+        margin: 30px 0;
+    }
+    .footernav ul{
+        display: flex;
+        justify-content: center;
+    }
+    .footernav ul li a{
+        color: white;
+        text-decoration: none;
+        margin: 30px;
+        list-style: none;
+     
+    }
+    .footernav ul li a:hover{
+        color: powderblue;
+        transform: scale(1.5);
+    }
+    .copywrite{
+        background-color: black;
+        padding: 30px;
+        display: flex;
+        justify-content: center;
+
+    }
+    .copywrite p{
+        color: white;
+    }
+    .navbar.navbar-expand-lg.navbar-light{
+        position: sticky;
+    }
+    .container-fluid{
+        position: sticky;
+    }
+    .btn a{
+      color: black;
+
+    }
+    .btn a:hover{
+      color: white;
+
+    }
+    .arrow-btn{
+      position: fixed;
+      bottom: 0px;
+      right: 20px;
+    }
+    .arrow-btn a{
+      color: aqua;
+      text-align: center;
+      font-size: 40px;
+      cursor: pointer;
+      transition: 2s;
+     
+    }
+    .arrow-btn a span:hover{
+      background-color: black;
+      border-radius: 20px;
+
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    #preloader{
+      background: white url(/index/1481.gif) no-repeat center center;
+       height: 100vh;
+       width: 100%;
+       position: fixed;
+       z-index: 100;
+       
+      }
+
+    /* media style data*/
+
+@media all and (max-width:768px){
+    .d-flex{
+        flex-direction: column;
+    }
+    .divtag{
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .foot{
+        background-color: black;
+        color: white;
+        font-size: 10px;
+        font-weight: 100;   
+    }
+    h1{
+        color: black;
+        font-size: 40px;
+        font-weight: 100;
+        text-align: center;
+        margin: 30px;
+    }
+    .footernav ul{
+        flex-direction: column;
+    }
+    .footernav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .copywrite p{
+        text-align: center;
+        font-size: 10px;
+    }
+    .copywrite span a{
+        opacity: 1;
+        text-decoration: none;
+    }
+    .copywrite span a:hover{
+        color: powderblue;
+    }
+    .copywrite{
+        background-color: black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+
+    }
+}
+</style>
+<body>
+  <div id="preloader">
+
+  </div>
+    <nav class="navbar navbar-expand-lg navbar-light" id="topbutton">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">STUDY_HUB<i class="fa-solid fa-book-open-reader"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index\index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#tododata">Todo-list</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  SUBJECTS
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Cn</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">daa</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">meanstack</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">spm</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">dl</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#footenddata" tabindex="-1" aria-disabled="true">Contact</a>
+              </li>
+            </ul>
+            
+          </div>
+        </div>
+      </nav>
+      <!--  -->
+     
+      <!--  -->
+      <h1>3-2 SUBJECTS</h1>
+      <div class="d-flex justify-content-around">
+ 
+        <a href="/cn/cndata.html"> <div class="divtag">
+             <div class="image"><img src="https://tse3.mm.bing.net/th?id=OIP.c2pvnuW9Ce_jwKV-jGXXowHaEK&pid=Api&P=0&h=180" alt="virat kohli"></div>
+             <h2>COMPUTER NETWORKS</h2>
+             <p>
+             </p>
+             <div class="button-1">
+             <button class="btn btn-outline-dark btn-sm ">
+                 <a href="https://drive.google.com/file/d/1XnPnwT2Yh5IN55Kd6C9yfNuIvy_CyZPq/view?usp=sharing" class="textunderline" title="syllabus daata">syllabus</a>
+             </button>
+             
+             </div></a>
+             </div>
+             <a href="/dl/dldata.html"><div class="divtag">
+                <div class="image"><img src="https://tse4.mm.bing.net/th?id=OIP.GFi5GgeJv2cPWN4TTVKDcgHaE8&pid=Api&P=0&h=180" alt="virat kohli"></div>
+                <h2>DEEP LEARNING</h2>
+                <p></p>
+                <div class="button-2">
+                <button class="btn btn-outline-dark btn-sm">
+                    <a href="https://drive.google.com/file/d/1OworH5SLUMJXSz0lvRqRi473acCICTZq/view?usp=sharing" class="textunderline">syllabus</a>
+                </button>
+                
+                </div>
+                </div> </a>
+                <a href="/daa/daadata.html">  <div class="divtag">
+                    <div class="image"><img src="https://tse2.mm.bing.net/th?id=OIP.FdaDRItVi6tZpyZyIwWAzAHaEU&pid=Api&P=0&h=180" alt="virat kohli"></div>
+                    <h2>DESIGN AND ANALYSIS OF ALGORITHMS</h2>
+                    <p></p>
+                    <div  class="button-3">
+                    <button class="btn btn-outline-dark btn-sm">
+                        <a href="https://drive.google.com/file/d/1KROah1nS7wM6-uHmpQbFTWmGkiKIE9hy/view?usp=sharing" class="textunderline">syllabus</a>
+                    </button>
+                    
+                    </div>
+                    </div></a>
+                </div>
+
+                <!-- another three cards -->
+                <div class="d-flex justify-content-around">
+                    <a href="/spm/spmdata.html"><div class="divtag">
+                        <div class="image"><img src="https://tse3.mm.bing.net/th?id=OIP.IrxWWA_t80zyBwe8kD7IywHaEK&pid=Api&P=0&h=180" alt="virat kohli"></div>
+                        <h2>SOFTWARE PROJECT MANAGEMENT</h2>
+                        <p>
+                        </p>
+                        <div class="button-4">
+                        <button class="btn btn-outline-dark btn-sm">
+                            <a href="https://drive.google.com/file/d/1vWDeU_sjbI-UVgY2eR7YaRxbqQITU0Qb/view?usp=sharing" class="textunderline">syllabus</a>
+                        </button>
+                        
+                        </div>
+                        </div></a>
+                        <!--  -->
+                        <a href="/meanstack/meanstackdata.html"> <div class="divtag">
+                            <div class="image"><img src="https://wallpapercave.com/wp/wp12007853.jpg" alt="virat kohli"></div>
+                            <h2>MEAN STACK DEVELOPMENT</h2>
+                            <p>
+                            </p>
+                            <div class="button-5">
+                            <button class="btn btn-outline-dark btn-sm">
+                                <a href="https://drive.google.com/file/d/1qyKCf29IM_njO38pYCA8on1y0iL27oud/view?usp=sharing" class="textunderline">syllabus</a>
+                            </button>
+                            
+                            </div>
+                            </div></a>
+                            <!--  -->
+                            <div class="divtag" id="contact">
+                                <div class="image"><img src="https://res.cloudinary.com/dt4zxdyxz/image/upload/v1711264750/tinywow_Y19jcm9wLHdfODYwLGhfNDgxLHhfMCx5XzA__51359020_migp4d.png" alt="virat kohli"></div>
+                                <a href="">            <h2>LABS</h2>
+                                <p>
+                                </p>
+                                <div class="button-1">
+                                <button class="btn btn-outline-dark btn-sm">
+                                    <a href="https://drive.google.com/file/d/11xxG1WFf46a0xu_kB6T6iJSvMe2C97vr/view?usp=sharing" class="textunderline">syllabus</a>
+                                </button>
+                                
+                                </div>
+                                </div></a>
+                          </div>
+                          <!-- todolist -->
+        
+         
+                          <div class="container" id="tododata">
+                            <h1 title="hey add your tasks to my board and prepare">TODO LIST</h1>
+                            <br>
+                       <form action="">
+                        <input type="text" name="item" id="item" placeholder="hey user add your tasks here....">
+                    <button onclick="e" class="btn1 btn btn-outline-primary" id="buttondata">Add</button>
+                       </form>
+                       <ol id="list">
+                    
+                       </ol>
+                        </div>
+        
+        <!--  -->
+    <footer><div class="footcontainer" id="footenddata">
+    <div class="socialmedia">
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://chat.whatsapp.com/HB657jFcNWfHUSG0Y1BcFK"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://t.me/+dCOOJhYmDeE1NzA9"><i class="fa-brands fa-telegram"></i></a>
+        <a href=""<i class="fa-brands fa-discord"></i></a>
+    </div>
+    <hr>
+    <div class="footernav">
+        <ul style="list-style: none;">
+            <li><a href="" id="bottombuttons">Home</a></li>
+            <li><a href="" id="bottombuttons">support</a></li>
+            <li><a href="mailto:studyhub803@gmail.com">Contact us</a></li>
+            <!-- a href="" id="bottombuttons" -->
+            <li><a href="" id="bottombuttons">About</a></li>
+        </ul>
+    </div>
+   
+</div>
+<div class="arrow-btn">
+  <a href="#topbutton"> <span><i class="fa-solid fa-circle-arrow-up"></i></span></a>
+</div>
+<div class="copywrite">
+    <p>© 2024 STUDY_HUB. ALL RIGHTS RESERVED. | FOUNDED BY <span><a href="https://www.linkedin.com/in/valavalaumesh/" target="_blank">VALAVALA UMESH</a></span></p> 
+ </div>
+       </footer>   
+
+</body>
+<!--  -->
+<script>
+    (function(){
+  
+        var list = document.querySelector('#list'),
+            form = document.querySelector('form'),
+            item = document.querySelector('#item');
+            btndata= document.getElementById('buttondata')
+            //if (btndata.value === "") {
+              //alert("Please add some task!");
+              //return false;
+           // }
+        form.addEventListener('submit',function(e){
+          e.preventDefault();
+          list.innerHTML += '<li>' + item.value + '</li>';
+          store();
+          item.value = "";
+        },false)
+       
+        list.addEventListener('click',function(e){
+          var t = e.target;
+          if(t.classList.contains('checked')){
+            t.parentNode.removeChild(t);
+          } else {
+            t.classList.add('checked');
+          }
+          store();
+        },false)
+        
+        function store() {
+          window.localStorage.myitems = list.innerHTML;
+        }
+        
+        function getValues() {
+          var storedValues = window.localStorage.myitems;
+          if(!storedValues) {
+            list.innerHTML = '<li>Make a to do list</li>';
+          }
+          else {
+            list.innerHTML = storedValues;
+          }
+        }
+        getValues();
+      })();
+//
+let loader= document.getElementById('preloader')
+window.addEventListener("load",function(){
+ loader.style.display='none';
+})
+
+  </script>
+   
+</html>
+<!--  <div class="border-top border-dark rounded-top">
+            <div class="bottom-info">
+                <div class="information-social" >
+                    <p>created by <a href="https://www.linkedin.com/in/valavalaumesh/">valavala umesh</a></p>
+                </div>
+                <div class="information-social">
+                    <i class="fa-brands fa-telegram"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div> -->
+             <!-- bottom details -->
+            <!-- <div class="border-top border-dark rounded-top">
+                <div class="bottom-info">
+                    <div class="information-social" >
+                        <p>created by <a href="https://www.linkedin.com/in/valavalaumesh/">valavala umesh</a></p>
+                    </div>
+                    
+                </div> -->
